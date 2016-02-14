@@ -1,0 +1,41 @@
+<%
+var title = '';
+var icon = '';
+if (page.category){
+  title = page.category;
+  icon = 'category';
+};
+if (page.tag){
+  title = page.tag;
+  icon = 'tag';
+};
+if (page.archive){
+  icon = 'archive';
+  if (page.year) title = page.year+  (page.month ? '/' + page.month : '');
+  else title = __('归档');
+};
+%>
+
+<div class="col-md-3" >
+  <h2 class="<%= icon %>-icon"><%= title %></h2>
+  <% if(page.archive){ %>
+  <div class="archiveslist">
+   <%- list_archives({format:'YYYY-MM'}) %>
+ </div>
+  <% } %>
+</div>
+<div id="main" class="col-md-9 clearfix">
+  <div id="archive-page">
+<% page.posts.each(function(item){ %>
+  <%- partial('_partial/article_row', {item: item, index: true}) %>
+<% }); %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="clearfix archive-nav">
+    <%- paginator({
+      prev_text: '<span></span>Prev',
+      next_text: 'Next<span></span>'
+    }) %>
+  </nav>
+<% } %>
+  </div>
+</div>

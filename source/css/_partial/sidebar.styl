@@ -1,0 +1,116 @@
+.sidebar-wrap
+  width 100%
+  line-height 1.8em
+  
+.widget
+  background #fff
+  box-shadow 1px 2px 3px #0e90d2
+  margin-bottom 30px
+  word-wrap break-word
+  .title
+    padding 15px 20px
+    font-size 20px
+    font-weight normal
+
+  .entry > li
+    height 40px
+    line-height 40px
+    text-align left
+    font-size 14px
+    padding 0 0 0 60px
+    width 100%
+    &:hover
+      background-color rgba(0,0,0,0.8)
+      border-left 3px solid #55acee
+      color #26A4DD
+      -webkit-transition all 0.3s ease-in-out
+      -moz-transition all 0.3s ease-in-out
+      -o-transition all 0.3s ease-in-out
+      transition all 0.3s ease-in-out 
+      
+ul, ol, dl
+  list-style-type none
+
+h3
+  margin 0
+
+.search
+  margin-bottom 30px
+  input
+    background #fff
+    font-family font-title
+    font-style italic
+    font-size 1em
+    padding 10px 15px
+    border 1px solid color-border
+    width 100%
+    box-sizing border-box
+    color color-meta
+    &:focus
+      color color-font
+
+  .tag
+    small
+      margin-left 15px
+      color color-meta
+      &:before
+        content '('
+      &:after
+        content ')'
+
+  .twitter
+    li
+      border-bottom 1px solid color-border
+      padding 15px 20px
+      font-size 0.9em
+      &:last-of-type
+        border-bottom none
+    small
+      display block
+      margin-top 10px
+      color color-meta
+      line-height 1
+
+  .tagcloud
+    .entry
+      padding-right 5px
+    a
+      margin-right 10px
+      display inline-block
+
+/*归档*/
+ul.archive-list
+  list-style-type none
+
+
+li.archive-list-item
+  height 40px
+  line-height 40px
+  text-align left
+  font-size 14px
+  padding 0 0 0 60px
+  width 100%
+  &:hover
+    background-color rgba(0,0,0,0.8)
+    border-left 3px solid #55acee
+    color #26A4DD
+    -webkit-transition all 0.3s ease-in-out
+    -moz-transition all 0.3s ease-in-out
+    -o-transition all 0.3s ease-in-out
+    transition all 0.3s ease-in-out 
+
+span.archive-list-count
+  font-size 16px
+  margin-left 10px
+
+/*文章目录*/
+ol.toc
+  padding-left 25px
+
+@media middle
+  #toc
+    position fixed
+    width inherit
+
+
+

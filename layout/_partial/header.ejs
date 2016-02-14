@@ -1,0 +1,71 @@
+<!-- header start -->
+		<!-- ================ --> 
+		<header class="header navbar">
+
+
+						<!-- header-top start -->
+						<!-- ================ -->
+						<div class="header-top">
+
+							<!-- logo -->
+							<div class="logo">
+								<a href="<%- config.root %>"><%- image_tag('/img/logo.png', {id:'logo',alt:config.title}) %></a>
+							</div>
+
+							<!-- title-subtitle -->
+							<div class="title-subtitle">
+								<div class="sitetitle"><a href="<%- config.root %>"><%= config.title %></a></div>
+								<div class="subtitle"><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></div>
+							</div>
+
+						</div>
+						<!-- header-top end -->
+
+					
+					<div class="header-bottom">
+
+						<!-- header-bottom start -->
+						<!-- ================ -->
+						<div class="header-bottom">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse" id="navbar-collapse-1">
+											<ul class="nav navbar-nav">
+											  <% for (var i in theme.menu){ %>
+      <li><a href="<%- config.root %><%- theme.menu[i] %>"><%= i %></a></li>
+    <% } %>	
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-bottom end -->
+						</div>
+
+		</header>
+		<!-- header end -->

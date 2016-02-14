@@ -1,0 +1,41 @@
+# Header
+menu:
+  首页: 
+  存档: archive
+  分类: category
+  标签: tag
+  关于: about
+
+widgets:
+- search
+- category
+- tag
+- archive
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics:
+rss:
+
+comment_provider: 
+# Facebook comment
+facebook:
+  appid: 
+  comment_count: 
+  comment_width: 
+  comment_colorscheme: 

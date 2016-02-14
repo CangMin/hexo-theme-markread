@@ -1,0 +1,88 @@
+*
+  margin 0
+  padding 0
+
+html,body
+  height 100%
+
+body
+  background color-background
+  color color-font
+  font-family font-default
+  text-shadow 0 0 1px transparent
+  @media screen and (max-width: 1260px)
+    margin 0
+  @media screen and (max-width: 600px)
+    font-size 13px
+
+h1, h2, h3, h4, h5, h6
+  color #333
+
+h1
+  font-size 38px
+  font-weight 700
+  margin-bottom 20px
+
+h2
+  font-size 28px
+  margin-bottom 15px
+
+h3
+  font-size 22px
+
+a
+  text-decoration none
+  color color-link
+  &:hover
+    text-decoration none
+    color color-link-hover
+  &:focus
+    outline none
+  &:active
+    outline none
+
+img
+  display block
+  max-width 100%
+  height auto
+
+.alignleft
+  float left
+
+.alignright
+  float right
+
+.clearfix
+  clearfix()
+
+.inner
+  width page-width
+  margin 80px auto
+  @media screen and (max-width: 1260px)
+    width 100%
+
+#main-col
+  width 900px
+  @media screen and (max-width: 1260px)
+    width 100%
+    margin-right -300px
+  @media screen and (max-width: 900px)
+    margin-right 0
+    float none
+
+#wrapper
+  @media screen and (max-width: 1260px)
+    margin-right 300px
+  @media screen and (max-width: 900px)
+    margin-right 0
+
+#container
+  -webkit-flex:1
+  width 98%
+  margin 20px auto
+  @media mini
+    width 98%
+  @media middle
+    width 95%
+  @media large
+    width 80%
