@@ -6,9 +6,16 @@
     <header>
       <% if (item.layout != 'page'){ %>
         <div class="icon"></div>
-        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <%- partial('post/title') %>        
+        <div class="post-meta clearfix">
+        <ul class="post-meta-list">
+        <li><i class="icon-calendar"> </i><a datetime="<%= item.date.toDate().toISOString() %>" href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></li>
+        <li><%- partial('post/category') %></li>
+        <li><%- partial('post/tag') %></li>    
+        </ul>     
+        </div>
       <% } %>
-      <%- partial('post/title') %>
+      
     </header>
     <div class="entry">
       <% if (item.excerpt && index){ %>
@@ -29,9 +36,7 @@
           <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
         </div>
         <% } %>
-      <% } else { %>
-        <%- partial('post/category') %>
-        <%- partial('post/tag') %>
+      <% } else { %>       
         <%- partial('post/share') %>
       <% } %>
       <div class="clearfix"></div>

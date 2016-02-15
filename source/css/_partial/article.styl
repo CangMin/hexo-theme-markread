@@ -2,7 +2,7 @@ icon-size = 32px
 icon-gap = 25px
 
 article
-  box-shadow 1px 2px 3px #ddd
+  box-shadow 1px 2px 3px #B7E1F7
   background #fff
   &.page
     padding-left 20px
@@ -89,6 +89,9 @@ article
         right 10px
 
   header
+    border-bottom 2px solid #55acee
+    margin-bottom 20px
+    padding-bottom 10px
     .icon
       width icon-size
       height icon-size
@@ -107,12 +110,20 @@ article
         width 32px
         text-align center
 
+
+ul.post-meta-list
+  width 100%
+  li
+    float left
+    margin-right 25px
+
+
+
     time
       color color-meta
-      font 0.9em font-title
       margin-bottom 5px
-      display block
-      line-height 1
+      display inline-block
+
 
     .title
       font-weight normal
@@ -256,6 +267,17 @@ article
       &.more-link
         &:before
           content '\f054'
+        padding 5px 10px
+        border 1px solid #444
+        border-radius:3px
+        color #444
+        -webkit-transition all 0.2s ease-in-out
+        -moz-transition all 0.2s ease-in-out
+        -o-transition all 0.2s ease-in-out
+        -ms-transition all 0.2s ease-in-out
+        transition all 0.2s ease-in-out
+        &:hover
+          color #339beb
 
       &.comment-link
         &:before
