@@ -90,7 +90,7 @@ article
 
   header
     border-bottom 2px solid #55acee
-    margin-bottom 20px
+    margin-bottom 40px
     padding-bottom 10px
     .icon
       width icon-size
@@ -245,65 +245,57 @@ ul.post-meta-list
       width 45%
       font-size 1.5em
 
-  footer
-    margin-top 15px
-    padding-top 10px
-    border-top 1px solid color-border
+footer.article-footer
+  margin-top 40px
+  padding-top 10px
+  border-top 1px solid color-border
+  color color-meta
+  font-size 0.9em
+  line-height 16px
+  position relative
+  min-height 16px
+  a
     color color-meta
-    font-size 0.9em
-    line-height 16px
-    position relative
-    min-height 16px
-    a
-      color color-meta
+    &:hover
+      color color-link
+      text-decoration none
+    &:before
+      font 1.1em font-icon
+      padding-right 10px
+      vertical-align middle
+
+    &.more-link
+      &:before
+        content '\f054'
+      padding 5px 10px
+      border 1px solid #444
+      border-radius:3px
+      color #444
+      -webkit-transition all 0.2s ease-in-out
+      -moz-transition all 0.2s ease-in-out
+      -o-transition all 0.2s ease-in-out
+      -ms-transition all 0.2s ease-in-out
+      transition all 0.2s ease-in-out
       &:hover
-        color color-link
-        text-decoration none
+        color #339beb
+
+    &.comment-link
       &:before
-        font 1.1em font-icon
-        padding-right 10px
-        vertical-align middle
+        content '\f075'
 
-      &.more-link
-        &:before
-          content '\f054'
-        padding 5px 10px
-        border 1px solid #444
-        border-radius:3px
-        color #444
-        -webkit-transition all 0.2s ease-in-out
-        -moz-transition all 0.2s ease-in-out
-        -o-transition all 0.2s ease-in-out
-        -ms-transition all 0.2s ease-in-out
-        transition all 0.2s ease-in-out
-        &:hover
-          color #339beb
 
-      &.comment-link
-        &:before
-          content '\f075'
 
-    .categories, .tags
-      position relative
-      padding-left 25px
-      margin 5px 0
-      &:before
-        position absolute
-        font 1.1em font-icon
+  .addthis
+    margin-top 15px
+    iframe
+      margin-top 0
 
-    .categories
-      &:before
-        content '\f07b'
-        top 2px
-        left 1px
+#article-nav-newer
+  float left
 
-    .tags
-      &:before
-        content '\f02b'
-        top 3px
-        left 2px
+#article-nav-older
+  float right
 
-    .addthis
-      margin-top 15px
-      iframe
-        margin-top 0
+.tag-cloud
+  a
+    margin-right 10px

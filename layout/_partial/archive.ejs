@@ -16,26 +16,37 @@ if (page.archive){
 };
 %>
 
-<div class="col-md-3" >
-  <h2 class="<%= icon %>-icon"><%= title %></h2>
-  <% if(page.archive){ %>
-  <div class="archiveslist">
-   <%- list_archives({format:'YYYY-MM'}) %>
- </div>
-  <% } %>
-</div>
-<div id="main" class="col-md-9 clearfix">
+
+<div id="main" class="col-md-8 clearfix">
   <div id="archive-page">
+  <h2 class="<%= icon %>-icon"><%= title %></h2>
 <% page.posts.each(function(item){ %>
   <%- partial('_partial/article_row', {item: item, index: true}) %>
 <% }); %>
 <% if (page.total > 1){ %>
   <nav id="page-nav" class="clearfix archive-nav">
     <%- paginator({
-      prev_text: '<span></span>Prev',
-      next_text: 'Next<span></span>'
+      prev_text: '&laquo;',
+      next_text: '&raquo;'
     }) %>
   </nav>
 <% } %>
   </div>
+</div>
+
+
+<div class="col-md-2" >
+  <% if(page.archive){ %>
+  <div class="archiveslist">
+  <%- partial('../_widget/archive') %>
+ </div>
+  <% } %>
+  <% if(page.category){ %>
+  <div class="archiveslist">
+  <%- partial('../_widget/category') %>
+ </div>
+  <% } %>
+  <% if(page.tag){ %>
+  <%- partial('../_widget/tag') %>
+  <% } %>
 </div>

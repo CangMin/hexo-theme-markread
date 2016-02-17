@@ -24,7 +24,7 @@
         <%- item.content %>
       <% } %>
     </div>
-    <footer>
+    <footer class="article-footer">
       <% if (index){ %>
         <% if (item.excerpt){ %>
           <div class="alignleft">
@@ -38,6 +38,7 @@
         <% } %>
       <% } else { %>       
         <%- partial('post/share') %>
+        <%- partial('post/nav') %>
       <% } %>
       <div class="clearfix"></div>
     </footer>

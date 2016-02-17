@@ -2,4 +2,9 @@
   <%- partial('_partial/article', {item: item, index: true}) %>
 <% }); %>
 
-<%- partial('_partial/pagination') %>
+<nav id="page-nav" class="clearfix archive-nav">
+    <%- paginator({
+      prev_text: '&laquo;',
+      next_text: '&raquo;'
+    }) %>
+</nav>
