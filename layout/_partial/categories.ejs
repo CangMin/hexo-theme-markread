@@ -1,10 +1,18 @@
 <section class="layout-wrap">
   <div class="layout-title">
-    <span><%= page.title %></span>
+    <h2><%= page.title %></h2>
   </div>
   <div class="layout-wrap-inner">
-    <% if(site.categories.length) { %>
-      <%- list_categories(site.categories) %>
-    <% } %>
+    <% site.categories.sort('name').each(function(item){ %>
+	<% if(item.parent) {%>
+		<ul class="second">
+		<li><a class = "list-2"href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+		</ul>
+     <% }else{%>
+     	<ul class="first">
+		<li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+		</ul>
+	<% } %>
+  <% }); %>
   </div>
 </section>
