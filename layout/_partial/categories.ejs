@@ -1,18 +1,10 @@
 <section class="layout-wrap">
   <div class="layout-title">
-    <h2><%= page.title %></h2>
+    <h2>共计<%= site.categories .length %>个分类</h2>
   </div>
   <div class="layout-wrap-inner">
-    <% site.categories.sort('name').each(function(item){ %>
-	<% if(item.parent) {%>
-		<ul class="second">
-		<li><a class = "list-2"href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-		</ul>
-     <% }else{%>
-     	<ul class="first">
-		<li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-		</ul>
-	<% } %>
-  <% }); %>
+     <% if(site.categories.length) { %>
+      <%- list_categories(site.categories) %>
+    <% } %>
   </div>
 </section>

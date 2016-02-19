@@ -313,5 +313,36 @@ footer.article-footer
       box-shadow:0 0 3px 0 #0e90d2
       transform translateY(-3px)
 
-ul.second
+ul.category-list
+  height 100%
+  display inline-block
+ul.category-list > li.category-list-item
+  float left
+  margin-right 20px
+  margin-bottom 50px
+  border 1px solid #0e90d2
+  border-radius 5px
+  padding 5px 10px
+
+li.category-list-item
+  padding 5px 10px
+  margin 3px
+  transition all 0.2s ease-in-out
+  &:hover
+    border 1px solid #0e90d2
+    border-radius 5px
+    box-shadow 0 0 3px 0 #0e90d2
+    transform translateY(-3px)
+
+li.category-list-item > a
+  color #333
+
+ul.category-list-child
   margin-left 20px
+
+ul.category-list-child > li
+  &:before
+    content "> "
+
+span.category-list-count
+  vertical-align super
