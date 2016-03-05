@@ -1,4 +1,8 @@
 <div id="toc" class="widget">
 	<h3 class="title">目录</h3>
+	<% if(toc(item.content,{list_number:true})){ %>
 	<%- toc(item.content,{list_number:true}) %>
+	<% } else { %>
+          <p class="toc-empty">此文章未包含目录</p>
+        <% } %>
 </div>
