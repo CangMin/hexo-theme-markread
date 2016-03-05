@@ -15,7 +15,7 @@ twitter:
   show_replies: false
   tweet_count: 5
 
-addthis:
+baiduShare:
   enable: true
   pubid:
   facebook: true
