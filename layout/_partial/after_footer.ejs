@@ -1,6 +1,21 @@
 <%- js(['/js/jquery.min.js','/js/bootstrap.min.js','/js/cangmin.js']) %>
-<script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
-<script src="<%- config.root %>js/gallery.js"></script>
+<!-- <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
+<script src="<%- config.root %>js/gallery.js"></script> -->
+
+<!-- add calendar widget -->
+<% if (theme.widgets.indexOf('calendar') != -1){ %>
+  <script src="<%- config.root %>js/calendar.js"></script>
+  <script src="<%- config.root %>js/languages.js"></script>
+  <script type="text/javascript">
+    $(function() {
+    <% if (theme.calendar.options){ %>
+      $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>', $.extend(<%- JSON.stringify(theme.calendar.options ) %>, {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
+    <% }else{ %>
+      $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>',{single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
+    <% } %>
+    });
+  </script>
+<% } %>
 
 <% if (config.disqus_shortname){ %>
 <script type="text/javascript">
